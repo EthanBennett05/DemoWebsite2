@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1768243553393",
+    "packageType": "Trophy Whitetail",
+    "startDate": "2026-01-12",
+    "endDate": "2026-01-15",
+    "numHunters": 4,
+    "firstName": "Joe",
+    "lastName": "Smith",
+    "email": "joesmith@joesmith.com",
+    "phone": "1",
+    "specialRequests": "None",
+    "status": "approved",
+    "createdAt": "2026-01-12T18:45:53.393Z",
+    "updatedAt": "2026-01-12T19:46:30.673Z"
+  },
+  {
+    "id": "1768244528965",
+    "packageType": "Mountain Elk",
+    "startDate": "2026-01-16",
+    "endDate": "2026-01-20",
+    "numHunters": 1,
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "email": "bobsmith@email.com",
+    "phone": "1",
+    "specialRequests": "Gluten Free",
+    "status": "approved",
+    "createdAt": "2026-01-12T19:02:08.965Z",
+    "updatedAt": "2026-01-12T19:10:21.434Z"
+  },
+  {
+    "id": "1768244871333",
+    "packageType": "Waterfowl Dawn",
+    "startDate": "2026-01-21",
+    "endDate": "2026-01-17",
+    "numHunters": 4,
+    "firstName": "Stephan",
+    "lastName": "A Smith",
+    "email": "stephan@asmith.com",
+    "phone": "2",
+    "specialRequests": "None",
+    "status": "approved",
+    "createdAt": "2026-01-12T19:07:51.333Z",
+    "updatedAt": "2026-01-12T19:11:15.707Z"
+  }
+]
