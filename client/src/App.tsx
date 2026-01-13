@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar"
 import AdminLogin from "./pages/admin/adminLogin"
 import AdminDashboard from "./pages/admin/adminDashboard"
 import AdminBookings from "./pages/admin/adminBookings"
-import GalleryManager from "./pages/admin/adminGalleryManager"
+import AdminGalleryManager from "./pages/admin/admingallerymanager"
 
 
 export default function App() {
@@ -25,7 +25,7 @@ export default function App() {
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/bookings" element={<AdminBookings />}/>
-        <Route path="/admin/gallery-manager" element={<GalleryManager/>} />
+        <Route path="/admin/gallery-manager" element={<AdminGalleryManager/>} />
       </Routes>
     </BrowserRouter>
   )
