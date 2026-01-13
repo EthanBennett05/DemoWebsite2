@@ -6,26 +6,27 @@ function PublicGallery() {
   const [error, setError] = useState<string>('');
   const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5002';
 
-  const fetchImages = useCallback(async () => {
-    try {
-      setLoading(true);
-      // Ensure the port matches your current backend (usually 5002)
-      const res = await fetch(`${API_BASE}/api/images`);
-      
-      if (!res.ok) {
-        throw new Error('Failed to fetch images');
-      }
-      
-      const data = await res.json();
-      setImages(data.images);
-      setError('');
-    } catch (err) {
-      console.error('Error fetching images:', err);
-      setError('Connection to archive failed');
-    } finally {
-      setLoading(false);
+const fetchImages = useCallback(async () => {
+  try {
+    setLoading(true);
+    console.log('Fetching from:', API_BASE); // Debug log
+    const res = await fetch(`${API_BASE}/api/images`);
+    
+    if (!res.ok) {
+      throw new Error(`Failed to fetch images: ${res.status}`);
     }
-  }, []);
+    
+    const data = await res.json();
+    setImages(data.images);
+    setError('');
+  } catch (err) {
+    console.error('Error fetching images:', err);
+    console.error('API_BASE was:', API_BASE); // See what URL it's trying
+    setError(`Connection failed. API: ${API_BASE}`);
+  } finally {
+    setLoading(false);
+  }
+}, []);
 
   useEffect(() => {
     fetchImages();

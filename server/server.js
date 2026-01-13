@@ -53,7 +53,13 @@ const writeDB = (data) => {
 };
 
 // --- MIDDLEWARE ---
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://demowebsite2-1.onrender.com', // Add Render frontend URL
+  ],
+  credentials: true
+}));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
