@@ -84,7 +84,7 @@ const fetchImages = useCallback(async () => {
                   <img
                     src={`${API_BASE}${img}`}
                     alt={`Field Entry ${index}`}
-                    className="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-all duration-700"
                   />
                   
                   {/* Subtle Detail Overlay */}
