@@ -9,7 +9,7 @@ function AdminLogin() {
   const navigate = useNavigate();
 
   // Unified API Port to 5002 to match your server.js
-  const API_URL = 'http://localhost:5002/api/login';
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5002';
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

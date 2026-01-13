@@ -4,12 +4,13 @@ function PublicGallery() {
   const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
+  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5002';
 
   const fetchImages = useCallback(async () => {
     try {
       setLoading(true);
       // Ensure the port matches your current backend (usually 5002)
-      const res = await fetch('http://localhost:5002/api/images');
+      const res = await fetch(`${API_BASE}/api/images`);
       
       if (!res.ok) {
         throw new Error('Failed to fetch images');
@@ -80,7 +81,7 @@ function PublicGallery() {
                   className="group relative aspect-square bg-[#242622] border border-[#7a5c3d]/40 overflow-hidden shadow-lg transition-all duration-500 hover:border-amber-600"
                 >
                   <img
-                    src={`http://localhost:5002${img}`}
+                    src={`${API_BASE}${img}`}
                     alt={`Field Entry ${index}`}
                     className="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
                   />

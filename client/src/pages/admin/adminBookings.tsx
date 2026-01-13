@@ -22,7 +22,7 @@ export default function AdminBookings() {
   const [filter, setFilter] = useState<"all" | "pending" | "approved" | "denied">("all");
   
   const navigate = useNavigate();
-  const API_BASE = "http://localhost:5002"; // Consistent Port
+  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5002';
   const token = localStorage.getItem("adminToken");
 
   const fetchBookings = useCallback(async () => {

@@ -36,7 +36,7 @@ export default function AdminDashboard() {
 
   const navigate = useNavigate();
   const token = localStorage.getItem('adminToken');
-  const API_BASE = 'http://localhost:5002';
+  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5002';
 
   // 1. Unified data loader
   const loadData = useCallback(async () => {

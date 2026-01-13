@@ -8,7 +8,7 @@ export default function AdminGalleryManager() {
   const [message, setMessage] = useState<string>('');
   const navigate = useNavigate();
   
-  const API_BASE = 'http://localhost:5002';
+  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5002';
   const token = localStorage.getItem('adminToken');
 
   useEffect(() => {
