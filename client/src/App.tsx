@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar"
 import AdminLogin from "./pages/admin/adminLogin"
 import AdminDashboard from "./pages/admin/adminDashboard"
 import AdminBookings from "./pages/admin/adminBookings"
-import AdminGalleryManager from "./pages/admin/admingallerymanager"
+import AdminGalleryManager from "./pages/admin/adminGalleryManager"
 
 
 export default function App() {
