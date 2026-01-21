@@ -6,7 +6,7 @@ export default function Home() {
     <div className="bg-[#1a1c18] min-h-screen text-white">
       
       {/* 1. Hero / Slideshow Section */}
-      <section className="relative h-[80vh] w-full border-b-4 border-amber-900/30">
+      <section className="relative h-[50vh] md:h-[80vh] w-full border-b-4 border-amber-900/30">
         <Slideshow />
         <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6">
           
